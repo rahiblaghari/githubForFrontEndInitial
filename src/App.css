@@ -63,5 +63,32 @@ div.tab:hover {
   height: 100vh;
   width: 100vw;
   font-size: 1.5vw;
-  
+}
+
+.signInPage {
+  margin-left: 1vw;
+}
+
+.searchBox {
+  height: 2vw;
+  width: 12vw;
+  font-size: 1vw;
+  background-color: lightsteelblue;
+  margin-left: 1vw;
+}
+
+.searchField{
+  display: flex;
+}
+
+.searchButton {
+  height: 2vw;
+  width: 2vw;
+  margin-left: 0.1vw;
+  background-image: url("images/searchIcon.png");
+  background-size: 1vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  display: flex;
 }

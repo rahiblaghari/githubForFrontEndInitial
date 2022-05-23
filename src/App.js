@@ -6,7 +6,8 @@ import SignIn from './signInComponents/SignIn';
 import React from 'react';
 
 function App() {
-  let [isSignedIn, setSignedIn] = React.useState(false);
+  let [isSignedIn, setSignedIn] = React.useState(false);// set to false later
+
   let [currState, setState] = React.useState("Home");
   // At beginning, pull json data, should look like this: (can call this userInfo later) may also add jwt id, last name, etc. as needed
   let input = {"name":"Rahib","email":"rlaghari@gmail.com","country":"USA","state":"Texas","city":"Dallas","sports":["Soccer", "Basketball"], "goals":["18 mph run", "2 ft vertical", "Run 5 miles"], "teams": ["Everton", "Grizzlies", "Shooters"]}
