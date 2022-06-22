@@ -24,8 +24,8 @@ export default function SideBar(input){
                 <div onClick={() => input.setState("Teams")}>
                 <Tab tabName="Teams" tabIcon={teamsIcon}/>
                 </div>
-                <div onClick={() => input.setState("Calendar")}>
-                <Tab tabName="Calendar" tabIcon={calendarIcon}/>
+                <div onClick={() => input.setState("Events")}>
+                <Tab tabName="Events" tabIcon={calendarIcon}/>
                 </div>
                 <div onClick={() => input.setState("Settings")}>
                 <Tab tabName="Settings" tabIcon={settingsIcon}/>
