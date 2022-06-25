@@ -1,7 +1,5 @@
 import React from "react";
 import Tab from "./Tab";
-//todo, less import statements for images (possible, have to look into):
-// import {calendarIcon, goalsIcon, homeIcon, settingsIcon, teamsIcon} from  "../images"
 import calendarIcon from "../images/calendarIcon.png"
 import goalsIcon from "../images/goalsIcon.png"
 import homeIcon from "../images/homeIcon.png"
@@ -14,8 +12,6 @@ export default function SideBar(input){
     return(
         <>
             <div className="sideBar">
-                {/* make so that tabs have name, image (logo), and a way to click to set the screen to a certain way */}
-                {/* also, fix up css*/}
                 <div onClick={() => input.setState("Home")}>
                 <Tab tabName="Home" tabIcon={homeIcon}/>
                 </div>
