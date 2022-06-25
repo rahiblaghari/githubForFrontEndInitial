@@ -6,9 +6,9 @@ import SignIn from './signInComponents/SignIn';
 import React from 'react';
 
 function App() {
-  let [isSignedIn, setSignedIn] = React.useState(true);// set to false later
+  let [isSignedIn, setSignedIn] = React.useState(false);// set to false later
 
-  let [currState, setState] = React.useState("Events");
+  let [currState, setState] = React.useState("Home");
   // At beginning, pull json data, should look like this: (can call this userInfo later) may also add jwt id, last name, etc. as needed
   let input = {
     "name":"Rahib",
@@ -20,9 +20,9 @@ function App() {
     "goals":["18 mph run", "2 ft vertical", "Run 5 miles"], 
     "teams": ["Everton", "Grizzlies", "Shooters"], 
     "events": [
-      {"dates": "September 1st, 2022", "eventNames": "kayak"}, 
-      {"dates": "September 1st, 2022", "eventNames": "kayak"},
-      {"dates": "September 2nd, 2022", "eventNames": "soccer"}
+      {"dates": "September 1st, 2022", "eventNames": "Kayak"}, 
+      {"dates": "September 1st, 2022", "eventNames": "Kayak"},
+      {"dates": "September 2nd, 2022", "eventNames": "Soccer"}
     ]
   }
   // ^to add: teams they play on, calendar stuff. (Dont incorporate friends for another iteration)

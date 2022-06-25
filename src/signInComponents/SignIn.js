@@ -2,7 +2,7 @@ import React from "react";
 export default function TopBar(input){
     function validateSignIn(){
         if(document.getElementById("username").value==="Rahib" && document.getElementById("password").value==="Laghari")
-            return input.setSignedIn(true);
+            return input.setSignedIn(true);// implement by posting to server rather than checking vals in if statement, then depending on response decide what to do
         //get server request, should return a user info json object (such as name, info, etc) to be used in displayTabs
     }
     return(
