@@ -1,11 +1,12 @@
 import React from "react";
 import Tab from "./Tab";
 //todo, less import statements for images (possible, have to look into):
-import calendarIcon from "../images/calendar.png"
-import goalsIcon from "../images/goals.png"
-import homeIcon from "../images/home.png"
-import settingsIcon from "../images/settings.png"
-import teamsIcon from "../images/teams.png"
+// import {calendarIcon, goalsIcon, homeIcon, settingsIcon, teamsIcon} from  "../images"
+import calendarIcon from "../images/calendarIcon.png"
+import goalsIcon from "../images/goalsIcon.png"
+import homeIcon from "../images/homeIcon.png"
+import settingsIcon from "../images/settingsIcon.png"
+import teamsIcon from "../images/teamsIcon.png"
 
 
 export default function SideBar(input){
