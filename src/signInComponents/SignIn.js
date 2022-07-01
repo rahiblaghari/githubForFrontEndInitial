@@ -1,16 +1,36 @@
 import React from "react";
-///
 import axios from 'axios';
 
 let api = axios.create({
-  baseURL: "http://localhost:5000/validate",
+  baseURL: "http://localhost:5000/validateSignIn",
 })
-/// create validate route in backend
+
+let config = {
+    headers: {
+       'Content-Type': 'application/json',
+    } 
+}
+
 export default function TopBar(input){
-    function validateSignIn(){
-        if(document.getElementById("username").value==="Rahib" && document.getElementById("password").value==="Laghari")
-            return input.setSignedIn(true);// implement by posting to server rather than checking vals in if statement, then depending on response decide what to do
-        //get server request, should return a user info json object (such as name, info, etc) to be used in displayTabs
+
+    async function postCredentials(un, pw){
+        let getResponse = await api.post('/', {username: un, password: pw}, config)
+        .then(Response=>Response.data)
+        .catch()
+        //(console.log("Error, no backend server response, either backend not turned on or connection bad for some reason"))
+        return getResponse
+      }
+
+    async function validateSignIn(){
+        let user = document.getElementById("username").value
+        let success = await(postCredentials(user, document.getElementById("password").value))
+        if(success){
+            input.setUserInfo({"username":user})
+            return input.setSignedIn(true);
+        }
+        else{
+            console.log("invalid login attempt")
+        }
     }
     return(
         <div className="signInPage">

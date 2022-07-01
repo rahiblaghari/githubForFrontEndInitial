@@ -1,5 +1,10 @@
 import React from "react";
 export default function Settings(input){
+    if(!input){return(
+        <div>
+            Server timeout, please refresh page or resign in
+        </div>
+    )}
     return(
         <div className="contentText">
             Name: {input.userinfo.name}

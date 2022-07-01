@@ -1,5 +1,6 @@
 import React from "react";
 export default function Home(input){
+    
     return(
         <div>
             <div className="titleText">
